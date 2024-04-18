@@ -1,0 +1,30 @@
+artifact_path: outputs/mlflow-model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.8.18
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 1.0.2
+metadata:
+  azureml.base_image: mcr.microsoft.com/azureml/curated/azureml-automl:156
+  azureml.engine: automl
+mlflow_version: 2.9.2
+model_size_bytes: 1473752
+model_uuid: 7d6da617c8464fdcbb9eb3d80d0e366b
+run_id: zen_longan_t1t2cqklzw_40
+signature:
+  inputs: '[{"type": "long", "name": "Pregnancies"}, {"type": "long", "name": "Glucose"},
+    {"type": "long", "name": "BloodPressure"}, {"type": "long", "name": "SkinThickness"},
+    {"type": "long", "name": "Insulin"}, {"type": "double", "name": "BMI"}, {"type":
+    "double", "name": "DiabetesPedigreeFunction"}, {"type": "long", "name": "Age"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2024-03-24 15:34:37.389081'
